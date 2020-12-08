@@ -6,7 +6,7 @@ const Client = new Discord.Client()
 const prefix = "c/";
 const { MessageAttachment } = require("discord.js");
 
-Client.login(config.token)
+Client.login(process.env.token)
 Client.on("ready", message => {
     console.log("Connecter")
     Client.user.setStatus("online")
