@@ -1,11 +1,13 @@
 //------ Connection ------//
 const Discord = require("discord.js")
 const ytdl = require("ytdl-core")
+const config = require("./config.json")
+const fs = require("fs")
 const Client = new Discord.Client()
 const prefix = "c/";
 const { MessageAttachment } = require("discord.js");
 
-Client.login(process.env.TOKEN)
+Client.login(config.token)
 Client.on("ready", message => {
     console.log("Connecter")
     Client.user.setStatus("online")
